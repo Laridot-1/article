@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope');
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+img, picture, video, svg, canvas{
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+
+body{
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--light-grayish-blue);
+  display: grid;
+  place-items: center;
+}
+
+p{
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: var(--desaturated-dark-blue);
+  line-height: 1.5;
+}
+
+.flex{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flex-between{
+  justify-content: space-between;
+}
+
+.card{
+  width: 80%;
+  max-width: 450px;
+  margin: auto;
+  border-radius: 0.5rem;
+  /* overflow: hidden; */
+  display: grid;
+}
+.card__img{
+  width: 100%;
+  height: 12rem;
+  background-image: url('drawers.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.card__body{
+  --pad: 1.5rem;
+  background-color: var(--white);
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.card__title{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 1px;
+  line-height: 1.2;
+  padding: var(--pad) var(--pad) 0 var(--pad);
+}
+.content{
+  padding: 0 var(--pad);
+}
+.person-img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.name{
+  color: var(--dark-grayish-blue);
+}
+.date{
+  font-size: 0.8rem;
+  color: var(--grayish-blue);
+}
+.share-btn{
+  border: none;
+  outline: none;
+  background-color: var(--light-grayish-blue);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.parent{
+  position: relative;
+}
+.tooltip{
+  position: absolute;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 0.6rem;
+  padding: 0.825rem 1.25rem;
+  right: 0;
+  bottom: 5rem;
+  transform: translateX(3rem);
+  display: none;
+}
+.tooltip:after{
+  content: "";
+  position: absolute;
+  top: 2.65rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: var(--dark-grayish-blue);
+  left: 50%;
+  clip-path: polygon(100% 0%, 50% 100%, 0% 0%);
+}
+
+.front, .back{
+  transition: 0.05s;
+}
+.front{
+  padding: 0.5rem var(--pad) 1rem var(--pad);
+  overflow: hidden;
+}
+.back{
+  display: none;
+  padding: 0.5rem var(--pad) 1rem var(--pad);
+  background-color: var(--dark-grayish-blue);
+  overflow: hidden;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.btn-back{
+  color: var(--light-grayish-blue);
+}
+.social-btn{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: 0.1s;
+}
+.social-btn:focus{
+  transform: scale(1.35);
+}
+.share{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--grayish-blue);
+}
+
+.parent.mbshow .back{
+  display: flex;
+}
+.parent.mbshow .front{
+  display: none;
+}
+
+@media(min-width: 800px){
+  .card{
+    grid-template-columns: 1fr 2fr;
+    max-width: 900px;
+  }
+  .card__img{
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .card__body{
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
+
+:root{
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: hsl(200, 0%, 100%);
+}

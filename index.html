@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Article Preview Component</title>
+</head>
+<body>
+  
+  <main>
+    <article class="card">
+      <div class="card__img" loading="lazy"></div>
+      
+      <section class="card__body">
+        <h1 class="card__title">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
+        </h1>
+        <p class="content">
+          Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+        </p>
+        
+        <section class="parent">
+          <div class="flex flex-between front">
+            <div class="flex">
+              <img class="person-img" src="avatar-michelle.jpg" loading="lazy">
+              <div>
+                <h4 class="name">Michelle Appleton</h4>
+                <p class="date">28 Jun 2020</p>
+              </div>
+            </div>
+            <div class="tooltip">
+              <div class="flex">
+                <p class="share">Share</p>
+                <div class="social flex">
+                  <button class="social-btn">
+                    <img src="icon-facebook.svg">
+                  </button>
+                  <button class="social-btn">
+                    <img src="icon-twitter.svg">
+                  </button>
+                  <button class="social-btn">
+                    <img src="icon-pinterest.svg">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="share-btn btn-front">
+              <img src="icon-share.svg">
+            </button>
+          </div>
+          
+          <div class="flex flex-between back">
+            <div class="flex">
+              <p class="share">Share</p>
+              <div class="social flex">
+                <button class="social-btn">
+                  <img src="icon-facebook.svg">
+                </button>
+                <button class="social-btn">
+                  <img src="icon-twitter.svg">
+                </button>
+                <button class="social-btn">
+                  <img src="icon-pinterest.svg">
+                </button>
+              </div>
+            </div>
+            <button class="share-btn btn-back">
+              <img src="icon-share.svg">
+            </button>
+          </div>
+        </section>
+        
+      </section>
+    </article>
+  </main>
+  
+</body>
+</html>
